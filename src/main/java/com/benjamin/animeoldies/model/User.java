@@ -13,10 +13,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name="users")
-public class Users {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer user_id;
+    private Integer id;
 
     @NotBlank
     private UUID uuid;

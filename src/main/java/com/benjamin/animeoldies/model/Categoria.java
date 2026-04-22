@@ -10,11 +10,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="anime_categories")
-public class CategoriasAnime {
-    @NotNull
-    private Integer anime_id;
-    
-    @NotNull
-    private Integer category_id;
+@Table(name="categories")
+public class Categoria {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @NotBlank
+    private String name;
 }

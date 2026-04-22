@@ -10,12 +10,27 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="states")
-public class States {
+@Table(name="reviews")
+public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer state_id;
- 
+    private Integer id;
+
+    @NotNull
+    @ManyToOne
+    private User user;
+
+    @NotNull
+    @ManyToOne
+    private Anime anime;
+
+    @NotNull
+    private Integer score;
+
     @NotBlank
-    private String name;
+    private String body;
+
+    @NotNull
+    @ManyToOne
+    private State state;
 }
