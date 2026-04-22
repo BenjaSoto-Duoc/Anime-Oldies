@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.benjamin.animeoldies.model.User;
+import com.benjamin.animeoldies.model.Users;
 import com.benjamin.animeoldies.repository.UserRepo;
 
 @RestController
@@ -17,7 +17,7 @@ public class Control {
     private UserRepo repo;
 
     @GetMapping
-    public List<User> get() {
+    public List<Users> get() {
         return repo.findAll();
     }
 }
