@@ -1,5 +1,7 @@
 package com.benjamin.animeoldies.model;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -25,4 +27,13 @@ public class Anime {
     @NotNull
     @ManyToOne
     private State state;
+
+    @OneToMany(mappedBy = "anime")
+    private List<CategoriaAnime> categories;
+
+    @OneToMany(mappedBy = "anime")
+    private List<Link> links;
+
+    @OneToMany(mappedBy = "anime")
+    private List<Review> reviews;
 }

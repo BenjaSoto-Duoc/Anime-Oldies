@@ -18,9 +18,11 @@ public class CategoriaAnime {
 
     @NotNull
     @ManyToOne
+    @JoinColumn(name = "anime_id")
     private Anime anime;
 
     @NotNull
     @ManyToOne
+    @JoinColumn(name = "category_id")
     private Categoria category;
 }

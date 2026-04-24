@@ -1,5 +1,6 @@
 package com.benjamin.animeoldies.model;
 
+import java.util.List;
 import java.util.UUID;
 
 import jakarta.persistence.*;
@@ -23,4 +24,7 @@ public class User {
 
     @NotBlank
     private String nickname;
+
+    @OneToMany(mappedBy = "user")
+    private List<Review> reviews;
 }
