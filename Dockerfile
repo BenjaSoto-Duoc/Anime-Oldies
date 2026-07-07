@@ -7,7 +7,7 @@ COPY .mvn .mvn
 COPY mvnw .
 COPY src src
 
-RUN ./mvnw clean install -DskipTests
+RUN mvn clean install -DskipTests
 
 FROM eclipse-temurin:17-jre
 
